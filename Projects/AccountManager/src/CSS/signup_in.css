@@ -1,0 +1,37 @@
+.anchorPane1{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../Images/floweryblue.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.anchorPane2{
+    -fx-background-color: rgba(10, 10, 10, 0.664);
+}
+
+.panetitle{
+    -fx-font-size: 30;
+    -fx-font-weight: bolder;
+    -fx-font-family: 'Times New Roman', Times, serif;
+    -fx-text-align: center;
+    -fx-font-family: cursive;
+}
+
+.label{
+    -fx-text-background-color: white;
+}
+
+.nextBtn{
+    -fx-label-padding: 0;
+}
+
+.JFXTextField{
+    -fx-content-display: center;
+    -fx-text-fill: white;
+    -fx-font-family: serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+}
+
+.sign{
+    -fx-background-color: rgba(0, 0, 0, 0.664);
+}

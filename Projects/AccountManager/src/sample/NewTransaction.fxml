@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="201.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.NewTransactionController">
+
+    <content>
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <Label alignment="BOTTOM_CENTER" text="Description: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label alignment="BOTTOM_CENTER" text="Amount: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label alignment="BOTTOM_CENTER" text="Quantity:" GridPane.rowIndex="2" />
+            <Label alignment="BOTTOM_CENTER" text="Recipient:" GridPane.rowIndex="3" />
+         <JFXTextField fx:id="shortDesc" GridPane.columnIndex="5" />
+         <JFXTextField fx:id="priceField" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+         <JFXTextField fx:id="quantityField" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+         <JFXTextField fx:id="recipientField" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </content>
+   <header>
+      <Label alignment="CENTER" contentDisplay="CENTER" text="TRANSACTION DETAILS">
+         <font>
+            <Font name="SansSerif Bold" size="21.0" />
+         </font>
+      </Label>
+   </header>
+   <graphic>
+      <FontAwesomeIcon />
+   </graphic>
+</DialogPane>

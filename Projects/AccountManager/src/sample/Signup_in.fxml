@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane1" prefHeight="580.0" prefWidth="750.0" styleClass="anchorPane1" stylesheets="@../CSS/signup_in.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignupIn">
+
+   <children>
+      <StackPane layoutX="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="signUpPane" prefHeight="518.0" prefWidth="600.0" styleClass="anchorPane2" stylesheets="@../CSS/signup_in.css" visible="false">
+               <children>
+                  <Label alignment="CENTER" layoutX="221.0" layoutY="14.0" prefHeight="54.0" prefWidth="150.0" styleClass="panetitle" stylesheets="@../CSS/signup_in.css" text="Sign Up" />
+                  <Label alignment="CENTER" layoutX="80.0" layoutY="129.0" stylesheets="@../CSS/signup_in.css" text="First Name" />
+                  <Label alignment="CENTER" layoutX="261.0" layoutY="129.0" stylesheets="@../CSS/signup_in.css" text="Middle Name" />
+                  <Label alignment="CENTER" layoutX="471.0" layoutY="129.0" stylesheets="@../CSS/signup_in.css" text="Last Name" />
+                  <Label layoutX="263.0" layoutY="256.0" stylesheets="@../CSS/signup_in.css" text="Date of Birth" />
+                  <JFXTextField fx:id="firstName" alignment="BOTTOM_CENTER" focusColor="#169203" layoutX="14.0" layoutY="86.0" prefHeight="26.0" prefWidth="162.0" styleClass="JFXTextField" stylesheets="@../CSS/signup_in.css" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="midName" alignment="BOTTOM_CENTER" focusColor="#169203" layoutX="216.0" layoutY="86.0" prefHeight="26.0" prefWidth="162.0" styleClass="JFXTextField" stylesheets="@../CSS/signup_in.css" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="lastName" alignment="BOTTOM_CENTER" focusColor="#169203" layoutX="417.0" layoutY="86.0" prefHeight="26.0" prefWidth="149.0" styleClass="JFXTextField" stylesheets="@../CSS/signup_in.css" unFocusColor="WHITE" />
+                  <JFXDatePicker fx:id="birthDate" defaultColor="#07fa0f" layoutX="187.0" layoutY="217.0" prefHeight="28.0" prefWidth="218.0" styleClass="datePicker" stylesheets="@../CSS/allinone.css" />
+                  <Label layoutX="248.0" layoutY="346.0" stylesheets="@../CSS/signup_in.css" text="Telephone Number" />
+                  <JFXTextField fx:id="telNumber" alignment="BOTTOM_CENTER" focusColor="#169203" layoutX="191.0" layoutY="301.0" prefHeight="26.0" prefWidth="218.0" styleClass="JFXTextField" stylesheets="@../CSS/signup_in.css" unFocusColor="WHITE" />
+                  <Label layoutX="260.0" layoutY="434.0" stylesheets="@../CSS/signup_in.css" text="Email Address" />
+                  <JFXTextField fx:id="emailUp" alignment="BOTTOM_CENTER" focusColor="#169203" layoutX="191.0" layoutY="389.0" prefHeight="26.0" prefWidth="218.0" styleClass="JFXTextField" stylesheets="@../CSS/signup_in.css" unFocusColor="WHITE" />
+                  <FontAwesomeIcon fx:id="next" fill="#0dea09" glyphName="CHEVRON_CIRCLE_RIGHT" layoutX="258.0" layoutY="545.0" onMouseClicked="#nextClicked" size="80" wrappingWidth="84.00004882812505" />
+               </children>
+            </AnchorPane>
+
+            <AnchorPane fx:id="signUpPane2" prefHeight="284.0" prefWidth="600.0" styleClass="anchorPane2" stylesheets="@../CSS/signup_in.css" visible="false">
+               <children>
+                  <Label alignment="CENTER" layoutX="105.0" layoutY="101.0" prefHeight="50.0" prefWidth="316.0" text="Continue Sign Up" AnchorPane.bottomAnchor="431.0" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="101.0">
+                     <font>
+                        <Font name="Serif Bold" size="41.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BOTTOM_LEFT" layoutX="79.0" layoutY="194.0" prefHeight="28.0" prefWidth="134.0" text="Username">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label alignment="BOTTOM_LEFT" layoutX="79.0" layoutY="247.0" prefHeight="28.0" prefWidth="134.0" text="Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label alignment="BOTTOM_LEFT" layoutX="70.0" layoutY="316.0" prefHeight="28.0" prefWidth="134.0" text="Confirm Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="username" focusColor="#238a21" layoutX="223.0" layoutY="196.0" prefHeight="26.0" prefWidth="254.0" unFocusColor="#fff8f8" />
+                  <JFXPasswordField fx:id="pwordSignUp" focusColor="#238a21" layoutX="222.0" layoutY="248.0" onAction="#handlePwordCheck" onKeyReleased="#handlePwordCheck" onKeyTyped="#handlePwordCheck" prefHeight="26.0" prefWidth="253.0" unFocusColor="WHITE" />
+                  <JFXPasswordField fx:id="confirmPwordSignUp" focusColor="#238a21" layoutX="222.0" layoutY="317.0" prefHeight="26.0" prefWidth="254.0" stylesheets="@../CSS/signup_in.css" unFocusColor="WHITE" />
+                  <FontAwesomeIcon fx:id="next2" fill="#0dea09" glyphName="CHEVRON_CIRCLE_RIGHT" layoutX="289.0" layoutY="509.0" onMouseClicked="#nextClicked" size="80" textAlignment="CENTER" wrappingWidth="84.00004882812505" />
+                  <FontAwesomeIcon fx:id="previous" fill="#0dea09" glyphName="CHEVRON_CIRCLE_LEFT" layoutX="205.0" layoutY="510.0" onMouseClicked="#nextClicked" size="80" textAlignment="CENTER" wrappingWidth="84.00004882812505" />
+                  <Label fx:id="pwordMsg" layoutX="222.0" layoutY="281.0" prefHeight="18.0" prefWidth="254.0" />
+                  <Label fx:id="confirmPwordMsg" layoutX="222.0" layoutY="353.0" prefHeight="18.0" prefWidth="254.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="signInPane" layoutX="10.0" layoutY="10.0" prefHeight="518.0" prefWidth="600.0" styleClass="anchorPane2" stylesheets="@../CSS/signup_in.css">
+               <children>
+                  <Label alignment="CENTER" layoutX="218.0" layoutY="101.0" prefHeight="54.0" prefWidth="150.0" styleClass="panetitle" stylesheets="@../CSS/signup_in.css" text="Sign In" />
+                  <Label alignment="BOTTOM_RIGHT" layoutX="61.0" layoutY="297.0" prefHeight="48.0" prefWidth="134.0" stylesheets="@../CSS/signup_in.css">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="#ff6600" glyphName="KEY" size="40" />
+                     </graphic></Label>
+                  <FontAwesomeIcon fx:id="signInNext" fill="#11d70a" glyphName="CHEVRON_CIRCLE_RIGHT" layoutX="251.0" layoutY="469.0" onMouseClicked="#handleSignInNext" size="80" wrappingWidth="84.00004882812505" />
+                  <Label alignment="BOTTOM_RIGHT" contentDisplay="CENTER" layoutX="61.0" layoutY="227.0" prefHeight="48.0" prefWidth="134.0" stylesheets="@../CSS/signup_in.css">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon fill="#ff6200" glyphName="USER" size="40" />
+                     </graphic></Label>
+                  <JFXTextField fx:id="signInUsername" focusColor="#11d70a" layoutX="218.0" layoutY="230.0" prefHeight="38.0" prefWidth="260.0" styleClass="JFXTextField" stylesheets="@../CSS/signup_in.css" unFocusColor="WHITE" />
+                  <JFXPasswordField fx:id="pwordSignIn" focusColor="#11d70a" layoutX="214.0" layoutY="306.0" prefHeight="38.0" prefWidth="266.0" unFocusColor="WHITE" />
+                  <Label fx:id="signInMsg" layoutX="214.0" layoutY="365.0" prefHeight="18.0" prefWidth="266.0" />
+                  <Label fx:id="forgot" alignment="CENTER" layoutX="177.0" layoutY="522.0" onMouseClicked="#handleForgot" prefHeight="22.0" prefWidth="220.0" style="-fx-text-fill: #04eeff;" text="Forgot username or password?" textFill="#04eeff">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <Label fx:id="signUpLabel" alignment="CENTER" layoutY="251.0" onMouseClicked="#signChoice" prefHeight="38.0" prefWidth="150.0" styleClass="sign" stylesheets="@../CSS/signup_in.css" text="Sign Up" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="600.0">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label fx:id="signInLabel" alignment="CENTER" layoutY="290.0" onMouseClicked="#signChoice" prefHeight="38.0" prefWidth="150.0" styleClass="sign" stylesheets="@../CSS/signup_in.css" text="Sign In" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="600.0">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label fx:id="close" alignment="CENTER" layoutX="694.0" onMouseClicked="#handleClose" prefHeight="48.0" prefWidth="56.0" textFill="#f20000" AnchorPane.bottomAnchor="532.0" AnchorPane.leftAnchor="694.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="#fd0000" glyphName="CLOSE" size="35" wrappingWidth="23.74295711517334" />
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

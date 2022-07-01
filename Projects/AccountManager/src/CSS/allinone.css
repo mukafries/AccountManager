@@ -1,0 +1,191 @@
+.controlBtn{
+    -fx-background-color: #2a94d1bd;
+    -fx-text-background-color: rgb(255, 255, 255);
+    -fx-font-family: sans-serif;
+    -fx-font-size: 17px; 
+}
+
+.anchorPane0{
+    -fx-background-color: transparent;
+}
+
+.anchorPane{
+    -fx-background-image: url("../Images/niceweirdblue.jpg");
+    
+    -fx-background-size: 100% 100%;
+}
+
+.controlVbox{
+    -fx-background-color: #09233a;
+}
+
+.incomeTable .column-header-background .filler{
+    -fx-background-color: transparent;
+}
+.incomeTable .corner{
+    -fx-background-color: transparent;
+}
+
+.incomeTable .column-header-background{
+    -fx-background-color: linear-gradient( to bottom, #055513,#56e96ed2);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
+
+.incomeTable .column-header{
+    -fx-background-color: transparent;
+}
+
+.expenseTable .column-header-background{
+    -fx-background-color: linear-gradient( to bottom, #660505f6,#fd9898d2);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
+
+.expenseTable .column-header-background .filler{
+    -fx-background-color: transparent;
+}
+
+.expenseTable .column-header{
+    -fx-background-color: transparent;
+}
+
+
+.expenseTable .corner{
+    -fx-background-color: transparent;
+}
+
+.tableVbox{
+    -fx-background-color:transparent;
+}
+
+.incomeTable .table-cell{
+    -fx-border-color: rgba(255, 255, 255, 0.274);
+    -fx-background-color: #93f9b828;
+    /* -fx-background-color: transparent; */
+    -fx-padding: 2 0 2 10px;
+}
+
+.incomeTable .table-row-cell: hover, .expenseTable .table-row-cell: hover{
+    -fx-border-color: rgb(255, 255, 255);
+    -fx-text-background-color: black;
+    -fx-background-color: #f7f7f7;
+    /* -fx-background-color: transparent; */
+    -fx-padding: 2 0 2 10px;
+}
+
+.expenseTable .table-cell{
+    -fx-border-color: rgba(255, 255, 255, 0.274);
+    -fx-background-color: #f993931f;
+    /* -fx-background-color: transparent; */
+    -fx-padding: 2 0 2 10px;
+}
+
+.incomeVbox{
+    -fx-background-color: linear-gradient(to bottom, #055513,#75f18ad2);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 0 0;
+}
+
+.totalGridpane{
+    -fx-background-color: rgba(255, 255, 255, 0.253);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 0 0;
+}
+
+.expenseVbox{
+    -fx-background-color: linear-gradient(to bottom, #770404,#fa8787d2);
+    -fx-background-radius: 7px 7px 0px 0px;
+    -fx-background-insets: 0 11px 0 0;
+    -fx-padding: 0 0 5px 0;
+
+}
+
+
+.table-row-cell{
+    -fx-background-color: #06791511;
+    -fx-text-background-color: white;
+    -fx-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+.incomeTotal{
+    -fx-font-size: medium;
+    -fx-text-background-color: #004b04 ;
+    -fx-font-weight: bold;
+}
+
+.expenseTotal{
+    -fx-font-size: medium;
+    -fx-text-background-color: #690202 ;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell: odd{
+    -fx-background-color: #93f9b911;
+    -fx-background-insets: 0 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell: even{
+    -fx-background-color: #1dbbdd11;
+    -fx-background-insets: 0 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.stackPane{
+    -fx-background-color: transparent;
+    -fx-border-radius: 7 7 7 7;
+    -fx-background-radius: 7 7 7 7;
+}
+
+.glyphs{
+    -fx-background-color: white;
+}
+
+/* .label{
+    -fx-font-family: Arial, Helvetica, sans-serif;
+    -fx-text-background-color: #ffffff;
+    -fx-font-weight: bold;
+} */
+
+.detailhBox{
+    -fx-background-color: #09233a ;
+}
+
+.tsactLabel{
+    -fx-font-family: Haettenschweiler;
+    -fx-text-background-color: #ffffff;
+    -fx-font-weight: bolder;
+}
+
+.nameLabel{
+    -fx-font-family: Arial;
+    -fx-text-background-color: #04042e;
+    -fx-font-style: normal;
+    -fx-font-size: 25px;
+    -fx-font-weight: bolder;
+}
+
+.datePicker{
+    -fx-text-background-color: white;
+    -fx-border-color: white;
+}
+
+/* Color Theme Swatches in Hex */
+Local-Business-Online-Hub-Dashboard-1-hex { color: #8263F2; }
+Local-Business-Online-Hub-Dashboard-2-hex { color: #0597F2; }
+Local-Business-Online-Hub-Dashboard-3-hex { color: #0477BF; }
+Local-Business-Online-Hub-Dashboard-4-hex { color: #8EF229; }
+Local-Business-Online-Hub-Dashboard-5-hex { color: #BF9663; }
+
+
+/* Color Theme Swatches in Hex */
+ office-1-hex { color: #F2F2F2; }
+ office-2-hex { color: #0583F2; }
+ office-3-hex { color: #0D1A26; }
+ office-4-hex { color: #03588C; }
+ office-5-hex { color: #BFBA9F; }

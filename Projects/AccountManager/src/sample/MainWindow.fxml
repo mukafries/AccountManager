@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane styleClass="anchorPane" stylesheets="@../CSS/allinone.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane fx:id="mainPane" layoutX="1.0" prefHeight="851.0" prefWidth="1500" styleClass="anchorPane0" stylesheets="@../CSS/allinone.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+              <HBox alignment="CENTER" layoutX="155.0" layoutY="79.0" prefHeight="78.0" prefWidth="1320.0" styleClass="detailhBox" stylesheets="@../CSS/allinone.css">
+                  <children>
+                      <GridPane hgap="4.0" prefHeight="78.0" prefWidth="648.0" vgap="4.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.9999633789063" minWidth="10.0" prefWidth="200.8" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="560.0000244140624" minWidth="10.0" prefWidth="121.59996337890624" />
+                              <ColumnConstraints maxWidth="396.8000122070312" minWidth="96.00004882812505" prefWidth="188.00003662109373" />
+                              <ColumnConstraints maxWidth="436.79998779296875" minWidth="79.4000061035157" prefWidth="125.39996948242185" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints />
+                          </rowConstraints>
+      
+                          <Label text="Net Worth:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                          <Label fx:id="netWorth" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+      
+                          <Label text="Monthly Budget: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                          <Label fx:id="monthBudget" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      
+                          <Label text="Average Daily Income: " GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                          <Label fx:id="avgDailyIncome" prefHeight="18.0" prefWidth="298.0" text="0.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+      
+                          <Label text="Average Daily Spend: " GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                          <Label fx:id="avgDailyExpense" text="0.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                      </GridPane>
+                  </children>
+              </HBox>
+              <StackPane fx:id="stackContainer" layoutX="151.0" layoutY="162.0" prefHeight="689.0" prefWidth="1338.0" styleClass="stackPane" stylesheets="@../CSS/allinone.css">
+                  <children>
+                      <VBox fx:id="tsactVbox" alignment="CENTER" prefHeight="683.0" prefWidth="1338.0" spacing="10.0">
+                     <GridPane>
+                        <columnConstraints>
+                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                           <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                                  <VBox prefHeight="681.0" prefWidth="660.0" spacing="5.0" styleClass="incomeVbox" stylesheets="@../CSS/allinone.css" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                      <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="668.0" style="-fx-background-color: transparent;">
+                                          <Label text="INCOME" />
+                                      </HBox>
+                                      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="668.0" spacing="10" style="-fx-background-color: transparent;">
+                                          <children>
+                                              <JFXButton fx:id="addIncomeBtn" alignment="CENTER" onAction="#handleAddTransaction" prefHeight="34.0" prefWidth="30.0" style="-fx-background-color: white; -fx-background-radius: 0;">
+                                                  <graphic>
+                                                      <FontAwesomeIcon fill="#0a7f0f" glyphName="PLUS_SQUARE" size="25" />
+                                                  </graphic>
+                                              </JFXButton>
+                                              <JFXButton fx:id="removeIncomeBtn" onAction="#handleRemove" style="-fx-background-color: white; -fx-background-radius: 0;" text=" ">
+                                                  <graphic>
+                                                      <FontAwesomeIcon fill="#ff0101" glyphName="TRASH" size="25" />
+                                                  </graphic>
+                                              </JFXButton>
+                                              <JFXButton style="-fx-background-color: white; -fx-border-radius: 0; -fx-background-radius: 0;" text=" ">
+                                                  <graphic>
+                                                      <FontAwesomeIcon fill="#d24d06" size="25" />
+                                                  </graphic>
+                                              </JFXButton>
+                                          </children>
+                                          <!--                        <Button fx:id="editIncomeBtn" onAction="#handleEditTransaction" text="Edit">-->
+                                          <!--                        </Button>-->
+                                      </HBox>
+                                      <TableView fx:id="incomeTable" prefHeight="541.0" prefWidth="668.0" stylesheets="@../CSS/allinone.css">
+                                          <columns>
+                                              <TableColumn fx:id="iDate" text="Date-Time" />
+                                              <TableColumn fx:id="iDescription" prefWidth="100.59999465942383" text="Description" />
+                                              <TableColumn fx:id="iRecipient" prefWidth="65.0" text="Client (From)" />
+                                              <TableColumn fx:id="iPrice" prefWidth="104.00001525878906" text="Amount" />
+                                          </columns>
+                                          <columnResizePolicy>
+                                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                          </columnResizePolicy>
+                                          <styleClass>
+                                              <String fx:value="incomeTable" />
+                                              <String fx:value="table-row-cell" />
+                                          </styleClass>
+                                      </TableView>
+                              <TilePane alignment="CENTER" prefHeight="37.0" prefWidth="668.0" tileAlignment="BOTTOM_LEFT">
+                                 <children>
+                                                <Label prefHeight="18.0" prefWidth="164.0" styleClass="expenseTotal" stylesheets="@../CSS/allinone.css" text="Total">
+                                                 <font>
+                                                     <Font name="Comic Sans MS" size="12.0" />
+                                                 </font>
+                                             </Label>
+                                             <Label fx:id="totalIncomeLabel" alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="320.0" styleClass="expenseTotal" stylesheets="@../CSS/allinone.css" text="0.0">
+                                                 <font>
+                                                     <Font name="Comic Sans MS" size="12.0" />
+                                                 </font>
+                                             </Label>
+                                 </children>
+                              </TilePane>
+                                      <padding>
+                                          <Insets bottom="0.25" top="0.25" />
+                                      </padding>
+                                  </VBox>
+      
+                                        <VBox prefHeight="682.0" prefWidth="662.0" spacing="5.0" styleClass="expenseVbox" stylesheets="@../CSS/allinone.css" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                      <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="662.0">
+                                          <Label text="EXPENSES" />
+                                      </HBox>
+                                      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="662.0" spacing="10">
+                                          <children>
+                                              <JFXButton fx:id="addExpenseBtn" onAction="#handleAddTransaction">
+                                                  <graphic>
+                                                      <FontAwesomeIcon glyphName="PLUS_SQUARE_ALT" size="25" />
+                                                  </graphic>
+                                              </JFXButton>
+                                              <JFXButton fx:id="removeExpenseBtn" onAction="#handleRemove">
+                                                  <graphic>
+                                                      <FontAwesomeIcon glyphName="TRASH" size="25" />
+                                                  </graphic>
+                                              </JFXButton>
+                                              <JFXButton text=" ">
+                                                  <graphic>
+                                                      <FontAwesomeIcon size="25" />
+                                                  </graphic>
+                                              </JFXButton>
+                                          </children>
+                                      </HBox>
+                                      <TableView fx:id="expenseTable" prefHeight="545.0" prefWidth="662.0" stylesheets="@../CSS/allinone.css">
+                                          <columns>
+                                              <TableColumn fx:id="eDate" text="Date-Time" />
+                                              <TableColumn fx:id="eDescription" prefWidth="151.2000732421875" text="Description" />
+                                              <TableColumn fx:id="eRecipient" prefWidth="179.9998779296875" text="Recipient (To)" />
+                                              <TableColumn fx:id="ePrice" prefWidth="52.80006408691406" text="Amount" />
+                                          </columns>
+                                          <columnResizePolicy>
+                                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                          </columnResizePolicy>
+                                          <styleClass>
+                                              <String fx:value="expenseTable" />
+                                              <String fx:value="table-row-cell" />
+                                          </styleClass>
+                                      </TableView>
+                              <TilePane alignment="CENTER" prefHeight="56.0" prefWidth="662.0">
+                                 <children>
+                                             <Label prefHeight="18.0" prefWidth="320.0" styleClass="expenseTotal" stylesheets="@../CSS/allinone.css" text="Total" />
+                                             <Label fx:id="totalExpenseLabel" alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="315.0" styleClass="expenseTotal" stylesheets="@../CSS/allinone.css" text="0.0" />
+                                 </children>
+                              </TilePane>
+                                      <padding>
+                                          <Insets bottom="0.25" top="0.25" />
+                                      </padding>
+                                  </VBox>
+                        </children>
+                     </GridPane>
+                          <padding>
+                              <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                          </padding>
+                      </VBox>
+      
+      
+                      <VBox fx:id="chartVbox" prefHeight="671.0" prefWidth="1334.0" visible="false">
+                          <children>
+                              <HBox alignment="CENTER" prefHeight="95.0" prefWidth="1338.0" spacing="10.0">
+                                  <children>
+                                      <JFXRadioButton fx:id="barChartRadio" styleClass="radioBtn" stylesheets="@../CSS/radio.css" text="Bar Chart">
+                                          <toggleGroup>
+                                              <ToggleGroup fx:id="chartRadioBtn" />
+                                          </toggleGroup>
+                                      </JFXRadioButton>
+                                      <JFXRadioButton fx:id="pieChartRadio" styleClass="radioBtn" stylesheets="@../CSS/radio.css" text="Pie Chart" toggleGroup="$chartRadioBtn" />
+                                      <JFXRadioButton fx:id="lineChartRadio" styleClass="radioBtn" stylesheets="@../CSS/radio.css" text="Line Chart" toggleGroup="$chartRadioBtn" />
+                                  </children>
+                              </HBox>
+                              <StackPane>
+                                  <children>
+                                      <GridPane fx:id="pieChartGridPane" gridLinesVisible="true" prefHeight="610.0" prefWidth="1338.0" style="-fx-border-color: white;">
+                                          <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="692.2000122070312" minWidth="10.0" prefWidth="670.3999755859375" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="669.6000122070311" minWidth="10.0" prefWidth="668.8000244140624" />
+                                          </columnConstraints>
+                                          <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          </rowConstraints>
+                                          <children>
+                                              <PieChart fx:id="incomePieChart" animated="true" GridPane.columnIndex="0" />
+                                              <PieChart fx:id="expensePieChart" animated="true" GridPane.columnIndex="1" />
+                                          </children>
+                                      </GridPane>
+      
+                                      <BarChart fx:id="barChart" visible="false">
+                                          <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                          </xAxis>
+                                          <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                          </yAxis>
+                                      </BarChart>
+      
+                                      <LineChart fx:id="lineChart" visible="false">
+                                          <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                          </xAxis>
+                                          <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                          </yAxis>
+                                      </LineChart>
+                                  </children>
+                              </StackPane>
+      
+                          </children>
+                      </VBox>
+                  </children>
+              </StackPane>
+              <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="BOTTOM" layoutX="151.0" layoutY="36.0" prefHeight="50.0" prefWidth="1338.0" styleClass="nameLabel" stylesheets="@../CSS/allinone.css" text="NAME" />
+            <Label alignment="CENTER" layoutX="189.0" layoutY="5.0" prefHeight="27.0" prefWidth="1250.0" style="-fx-text-fill: #04eeff;" text="Account Manager v1.0" />
+              <VBox layoutX="-1.0" prefHeight="852.0" prefWidth="122.0" styleClass="controlVbox">
+                  <children>
+                      <JFXButton prefHeight="157.0" prefWidth="159.0" />
+                      <JFXButton fx:id="homeBtn" onAction="#handleStackPaneChange" prefHeight="114.0" prefWidth="160.0" styleClass="controlBtn" stylesheets="@../CSS/allinone.css" text=" " textFill="WHITE">
+                          <graphic>
+                              <FontAwesomeIcon fill="#0e0000" glyphName="HOME" size="35" />
+                          </graphic>
+                      </JFXButton>
+                      <JFXButton fx:id="chartBtn" onAction="#handleStackPaneChange" prefHeight="140.0" prefWidth="160.0" styleClass="controlBtn" stylesheets="@../CSS/allinone.css" text="  " textFill="WHITE">
+                          <graphic>
+                              <FontAwesomeIcon fill="#0e0000" glyphName="LINE_CHART" size="35" />
+                          </graphic>
+                      </JFXButton>
+                      <JFXButton prefHeight="136.0" prefWidth="160.0" styleClass="controlBtn" stylesheets="@../CSS/allinone.css" text=" " textFill="WHITE">
+                          <graphic>
+                              <FontAwesomeIcon fill="#0e0000" glyphName="SLIDERS" size="35" />
+                          </graphic>
+                      </JFXButton>
+                  </children>
+              </VBox>
+            <Label layoutX="1453.0" layoutY="5.0" />
+      
+          </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
